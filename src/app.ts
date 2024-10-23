@@ -4,12 +4,15 @@ import connectDB from './db';
 import { AppError } from './utils/AppError';
 dotenv.config();
 import indexRoutes from './routes/index';
+import cors from 'cors';
 
 const app: Application = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 connectDB();
+
+app.use(cors());
 
 app.use('/api', indexRoutes);
 

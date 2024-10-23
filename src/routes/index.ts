@@ -7,7 +7,7 @@ import { verifyToken } from '../utils/JwtUtil';
 const router = Router();
 
 router.post('/login', loginController);
-router.use('/patient', verifyToken, patientRoutes);
+router.use('/patient', patientRoutes);
 router.use('/provider', verifyToken, providerRoutes);
 
 export default router;

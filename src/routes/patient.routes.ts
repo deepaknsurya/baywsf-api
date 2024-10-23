@@ -1,8 +1,9 @@
 import { Router } from 'express';
-import healthTipController from '../controllers/healthTip.controller';
+import { fetchAllHealthTipController, healthTipController } from '../controllers/healthTip.controller';
 
 const router = Router();
 
 router.get('/health-tips', healthTipController);
+router.get('/health-tips-all', fetchAllHealthTipController);
 
 export default router;
