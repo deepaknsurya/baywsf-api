@@ -44,9 +44,12 @@ export const fetchPatientController = async (req: Request, res: Response | any, 
         const getPatient = await User.find({
             role: 'user'
         }).select({
+            _id: 0,
             id: '$_id',
-            name: 1,
-            specialization: 1
+            firstName: 1,
+            lastName: 1,
+            phoneNumber: 1,
+            email: 1
         });
 
         if (getPatient) {
