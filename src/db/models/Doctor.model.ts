@@ -47,4 +47,4 @@ async function seedDoctorDatabase() {
     }
 }
 
-export { Doctor, seedDoctorDatabase };
+export { Doctor, IDoctor, seedDoctorDatabase };
